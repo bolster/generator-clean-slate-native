@@ -1,0 +1,46 @@
+{
+  "name": "generator-clean-slate-native",
+  "version": "0.0.3",
+  "description": "Generator for React Native (iOS) projects in the style of me.",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nickhudkins/generator-clean-slate-native"
+  },
+  "author": {
+    "name": "Nick Hudkins",
+    "email": "nick@nickhudkins.com",
+    "url": "https://github.com/nickhudkins"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "react-native",
+    "webpack"
+  ],
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "fs-extra": "^0.23.1",
+    "glob": "5.0.x",
+    "lodash": "*",
+    "underscore.string": "*",
+    "yeoman-generator": "^0.20.2",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/nickhudkins/generator-clean-slate-native/issues"
+  },
+  "homepage": "https://github.com/nickhudkins/generator-clean-slate-native",
+  "directories": {
+    "test": "test"
+  }
+}
