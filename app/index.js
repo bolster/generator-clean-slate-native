@@ -60,7 +60,7 @@ module.exports = yeoman.generators.Base.extend({
     ];
 
     this.prompt(prompts, function (props) {
-      this.slugname = _.slugify(props.name);
+      this.slugname = _.camelize(props.name);
       this.safeSlugname = this.slugname.replace(/-+([a-zA-Z0-9])/g, function (g) {
         return g[1].toUpperCase();
       });
