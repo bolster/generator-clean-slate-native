@@ -16,8 +16,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   NSURL *jsCodeLocation;
 
+  // -- Simulator
   jsCodeLocation = [NSURL URLWithString:@"http://localhost:8080/index.ios.bundle"];
-//  jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+
+  // -- Run on device...replace localhost with IP, must also change IP in RCTWebSocketExecutor.m
+  //jsCodeLocation = [NSURL URLWithString:@"http://10.1.100.19:8080/index.ios.bundle"];
+
+  // -- Bundled
+  // While running `NODE_ENV=production npm run start`, run `curl 'http://localhost:8080/index.ios.bundle?dev=false&minify=true' -o iOS/main.jsbundle`
+  //jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"<%= projectName %>"
